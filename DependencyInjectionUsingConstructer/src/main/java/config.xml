@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="mobile" class="com.jsp.Mobile">
+		<constructor-arg name="id" value="1"></constructor-arg>
+		<constructor-arg name="brand" value="Nokia"></constructor-arg>
+	</bean>
+	<bean id="myPerson" class="com.jsp.Person">
+	
+	<constructor-arg name="name" value="spring"></constructor-arg>
+	<constructor-arg name="address"><value>Gurugram</value></constructor-arg>
+	
+	
+	<constructor-arg name="list">
+	<list>
+	<value>10</value>
+	<value>hello</value>
+	<value>a</value>
+	<value>85746958</value>
+	</list>
+	</constructor-arg>
+	
+	<constructor-arg name="set">
+	<set>
+	<value>1010</value>
+	<value>hello world</value>
+	<value>abcd</value>
+	<value>8574695898</value>
+	</set>
+	</constructor-arg>
+	
+	<constructor-arg name="a">
+	<array>
+	<value>10</value>
+	<value>20</value>
+	<value>30</value>
+	<value>40</value>
+	<value>50</value>
+	</array>
+	
+	
+	</constructor-arg>
+	<constructor-arg>
+	<map>
+	<entry key="1" value="10"></entry>
+	</map>
+	</constructor-arg>
+	<constructor-arg name="mobile" ref = "mobile"></constructor-arg>
+	</bean>
+	
+    
+
+</beans>
